@@ -1,0 +1,99 @@
+.quick_start {
+    .steps_section {
+        font-size: 32px;
+        background: $BLACK;
+        margin-top: 1.6em;
+        border-radius: $BORDER_RADIUS;
+        // Custom bullet
+        list-style-type: none;
+        counter-reset: orderedNumbers;
+        li {
+            position: relative;
+            padding: 1.8em 2em;
+            border-bottom: 1px solid $BLACK_LIGHT;
+            &:last-child {
+                border-bottom: none;
+            }
+            &:before {
+                counter-increment: orderedNumbers;
+                content: counter(orderedNumbers);
+        
+                background: $BLACK_LIGHT;
+                border-radius: 100%;
+                padding: .3em .8em;
+                margin-right: 2.9em;
+            }
+            &::after {
+                content: '';
+                width: 1.8em;
+                border-bottom: solid 1px $MAIN;
+                position: absolute;
+                left: 146px;
+                top: 80px;
+                z-index: 1;
+            }
+    
+            
+        }
+    
+        p {
+            margin-left: 10em;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 733px) {
+    .quick_start {
+        .steps_section {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            font-size: 32px;
+            background: $BLACK;
+            margin-top: 1.6em;
+            border-radius: $BORDER_RADIUS;
+            // Custom bullet
+            list-style-type: none;
+            counter-reset: orderedNumbers;
+            li {
+                position: relative;
+                padding: 3.5em 2em 1.8rem;
+                // padding-top: 6rem;
+                // padding-bottom: 2rem;
+                border-bottom: 1px solid $BLACK_LIGHT;
+                &:last-child {
+                    border-bottom: none;
+                }
+                &:before {
+                    counter-increment: orderedNumbers;
+                    content: counter(orderedNumbers);
+                    
+                    background: $BLACK_LIGHT;
+                    border-radius: 100%;
+                    padding: .3em .8em;
+                    position: absolute;
+                    right: 40%;
+                    top: 25px;
+                    margin-right: 0;
+                }
+                &::after {
+                    content: '';
+                    width: 1.8em;
+                    border-bottom: solid 1px $MAIN;
+                    position: initial;
+                    left: 0;
+                    top: 0;
+                    z-index: 1;
+                }
+        
+                
+            }
+        
+            p {
+                margin-left: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
