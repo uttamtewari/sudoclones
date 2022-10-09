@@ -1,0 +1,64 @@
+.footer_section {
+    border-top: 1px solid #95959a;
+    text-align: center;
+    position: relative;
+    .paragraph {
+        margin-bottom: 2rem;
+    }
+    #link_center {
+        color: $WHiTE;
+        border-bottom: 2px solid $WHiTE;
+        font-weight: 600;
+        &:hover {
+            border-bottom: 2px solid $MAIN;
+            color: $MAIN;
+        }
+    }
+    a {
+        text-decoration: none;
+        font-weight: 100;
+        color: #95959a;
+        &:hover {
+            border-bottom: 1px solid #95959a;
+        }
+    }
+    .social_media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+        margin: 2.6rem 0;
+        .icon {
+            text-align: center;
+            a {
+                font-weight: 200;
+            }
+            .img_icon {
+                transform: scale(.8);
+                width: 100px;
+                transition: $MAIN_TRANSITION;
+                &:hover {
+                    transform: scale(1);
+                }
+            }
+            #twitter {
+                transform: scale(1);
+                &:hover {
+                    transform: scale(1.4);
+                }
+            }
+        }
+    }
+    .links {
+        background: $BLACK;
+        padding: 1rem;
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+        a {
+            margin-right: 2rem;
+        }
+    }
+}

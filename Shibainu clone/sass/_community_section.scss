@@ -1,0 +1,26 @@
+.community_section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .clipboard_container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background-color: $BLACK;
+        padding: 1.6rem;
+        border-radius: $BORDER_RADIUS;
+        width: 100%;
+        overflow: hidden;
+        p {
+            margin-bottom: 0;
+            background: #95959A;
+            background: -webkit-linear-gradient(to right, #95959A 0%, #121118 100%);
+            background: -moz-linear-gradient(to right, #95959A 0%, #121118 100%);
+            background: linear-gradient(to right, #95959A 0%, #121118 100%);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+    }
+}

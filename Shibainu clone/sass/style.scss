@@ -1,0 +1,165 @@
+$MAIN: #A310F7;
+$SECOND: #F71057;
+$BLACK: #121118;
+$BLACK_LIGHT: #23212c;
+$GRAY: #fff;
+$WHiTE: #fff;
+$BACKGROUND: #1f1e29;
+$SECTION_BACKGROUND: #1c1b24;
+
+$MAIN_TRANSITION: .3s ease;
+$TABLET : 770px;
+$PHONE: 426px;
+
+$BORDER_RADIUS: 10px;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $BACKGROUND;
+    color: $WHiTE;
+    font-size: 18px;
+    font-family: 'Khula', sans-serif, Arial, Helvetica;
+}
+
+a {
+    color: $SECOND;
+    font-weight: bold;
+    transition: $MAIN_TRANSITION;
+    &:hover {
+        color: $MAIN;
+    }
+}
+
+p {
+    color: #95959a;
+    margin-bottom: 1.3rem;
+    font-size: 20px;
+}
+
+b {
+    color: $WHiTE;
+}
+
+strong {
+    color: $MAIN;
+}
+
+.btns_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.section {
+    padding: 4.3rem 3rem;
+    background: $SECTION_BACKGROUND;
+}
+
+.section_flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// .section-left {
+//     width: 48%;
+// }
+
+.btn {
+	position: relative;
+	border: solid 2px $MAIN;
+    border-radius: 60px;
+	padding: .3rem 1rem;
+	font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    gap: 5px;
+    background: $MAIN;
+    transition: $MAIN_TRANSITION;
+    &:hover {
+        box-shadow: 2px 2px 35px -10px $SECOND;
+        background: $SECOND;
+        border: $SECOND solid 2px;
+    }
+    &:last-child {
+        z-index: 2;
+    }
+	&::before{
+        background: $SECOND;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0%;
+        opacity: 0;
+		height: 100%;
+        border-radius: 60px;
+        z-index: -1;
+        transition: $MAIN_TRANSITION;
+        // transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+	&:hover{
+		&::before{
+            opacity: 1;
+			width: 100%;
+		}
+    }
+}
+
+.switch_svg {
+    width: 30px ;
+}
+
+.no-background {
+    background: none;
+}
+
+.title {
+    font-size: 2.3rem;
+    font-weight: 800
+}
+
+@import '_navegation';
+@import '_mediaQueries';
+@import '_header';
+@import '_ecosystem_section';
+@import '_cards_section';
+@import 'quick_start';
+@import '_atr_swap';
+@import 'how_to_buy_section';
+@import '_art_section';
+@import '_community_section';
+@import '_footer_section';
+
+@media screen and (max-width: $TABLET) {
+    .section {
+        text-align: center;
+    }
+
+} 
+
+@media screen and (max-width: $PHONE) {
+    .section_flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .section {
+        padding: 1rem .5rem;
+    }
+
+    .section-left {
+        width: none;
+    }
+
+    .btns_container {
+        justify-content: center;
+    }
+}
